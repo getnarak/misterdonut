@@ -1,0 +1,253 @@
+/* ===========================================
+   เว็บงี้อแฟน - Main Stylesheet 💖
+   =========================================== */
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Tahoma', 'Microsoft Sans Serif', sans-serif;
+  background: radial-gradient(circle at top, #ffdde1, #ee9ca7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Main Title */
+h1 {
+  color: #fff;
+  font-size: clamp(1.8rem, 5vw, 2.8em);
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff4d6d;
+  animation: glow 2s infinite alternate;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  z-index: 10;
+  position: relative;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff4d6d;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 40px #ff7eb9;
+  }
+}
+
+/* Button Styles */
+.button-container {
+  margin: 1rem 0;
+  z-index: 10;
+  position: relative;
+}
+
+.btn {
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: clamp(1rem, 4vw, 1.3em);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.btn.yes {
+  background: linear-gradient(45deg, #ff4d6d, #ff7eb9);
+  color: white;
+}
+
+.btn.no {
+  background: white;
+  color: #ff4d6d;
+}
+
+.btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 30px rgba(255, 77, 109, 0.5);
+}
+
+.btn:active {
+  transform: scale(1.05);
+}
+
+/* Cute Image */
+.cute-img {
+  width: clamp(150px, 25vw, 200px);
+  height: clamp(150px, 25vw, 200px);
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px #ff4d6d, 0 0 40px #ff7eb9;
+  object-fit: cover;
+  animation: bounce 3s infinite;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.cute-img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Floating Hearts Animation */
+.heart {
+  position: absolute;
+  font-size: clamp(20px, 4vw, 30px);
+  color: #ff4d6d;
+  animation: floatUp 5s linear forwards;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Sparkle Animation */
+.sparkle {
+  position: absolute;
+  width: clamp(3px, 1vw, 6px);
+  height: clamp(3px, 1vw, 6px);
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    transform: scale(0.5);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Statistics Panel */
+.stats {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  color: #ff4d6d;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+  font-weight: bold;
+  z-index: 100;
+}
+
+.stats div {
+  margin: 2px 0;
+}
+
+/* Loading Screen */
+.loading {
+  color: #fff;
+  font-size: 1.4em;
+  text-shadow: 0 0 10px #ff4d6d;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Custom SweetAlert Styles */
+.swal2-popup {
+  font-family: inherit !important;
+  border-radius: 20px !important;
+}
+
+.swal2-title {
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+}
+
+.swal2-confirm {
+  background: linear-gradient(45deg, #ff4d6d, #ff7eb9) !important;
+  border-radius: 25px !important;
+  font-weight: bold !important;
+  border: none !important;
+}
+
+.swal2-confirm:hover {
+  background: linear-gradient(45deg, #ff3654, #ff6ba6) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats {
+    top: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    padding: 8px 12px;
+  }
+  
+  .btn {
+    display: block;
+    margin: 0.5rem auto;
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .cute-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .stats {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 2rem;
+    display: inline-block;
+  }
+}

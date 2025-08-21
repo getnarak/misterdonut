@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บงี้อแฟน 💖</title>
+  
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js"></script>
+  
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div class="loading" id="loading">
+    กำลังเตรียมความน่ารัก... 💖
+  </div>
+  
+  <!-- Main Content -->
+  <div id="mainContent" style="display: none;">
+    <!-- Cute Image -->
+    <img id="cuteImg" class="cute-img" alt="น่ารัก">
+    
+    <!-- Main Title -->
+    <h1>ที่รัก... ขอโทษจริง ๆ 💖</h1>
+
+    <!-- Action Buttons -->
+    <div class="button-container">
+      <button class="btn yes" onclick="forgive()">💗 ให้อภัย 💗</button>                                                          
+      <button class="btn no" onclick="stillAngry()">😢 ยังงอนอยู่</button>
+    </div>
+
+    <!-- Statistics Display -->
+    <div class="stats" id="stats">
+      <div>👀 เปิดเว็บ: <span id="visitCount">0</span> ครั้ง</div>
+      <div>💖 ให้อภัย: <span id="yesCount">0</span> ครั้ง</div>
+      <div>😔 ยังงอน: <span id="noCount">0</span> ครั้ง</div>
+    </div>
+  </div>
+
+  <!-- Local JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
